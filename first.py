@@ -1,22 +1,8 @@
-#variable and operators
-
-number1 = 10
-number2 = 20
-print(number1 + number2)
-
-num=10
-count=20+num
-print(count)
-
-#string
-name = "John"
-greeting = "Hello, " + name + "!"
-print(greeting)
-
-#boolean
-is_raining = True
-if is_raining:
-    print("Don't forget to take an umbrella!")
-#list
-fruits = ["apple", "banana", "cherry"]
-print(fruits[0])  # Output: apple           
+#Type Conversion
+a = 1
+b = 2.5
+c = "3" 
+print(float(a)) #Converts integer to float
+print(int(b)) #Converts float to integer
+print(str(a)) #Converts integer to string
+print(int(c)) #Converts string to integer   
