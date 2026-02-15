@@ -1,8 +1,15 @@
-#Type Conversion
-a = 1
-b = 2.5
-c = "3" 
-print(float(a)) #Converts integer to float
-print(int(b)) #Converts float to integer
-print(str(a)) #Converts integer to string
-print(int(c)) #Converts string to integer   
+#input 
+name=input("Enter your name: ")
+print("Welcome",name)
+
+
+num1=int(input("Enter first number: "))
+num2=int(input("Enter second number: "))
+sum=num1+num2
+print("The sum is: ",sum)
+
+
+a=float(input("Enter first number: "))
+b=float(input("Enter second number: "))
+product=a*b
+print("The product is: ",product)   
