@@ -1,26 +1,19 @@
-# for loop in python
-num=[1,2,3,4,5,6]
-for pri in num:
-    print(pri)
-print("*--------*")
-#print string
-num=("Mango","Banana","orange")
-for pri in num:
-    print(pri)
-    print("*--------*")
+#range in python
+
+for el in range(10):
+    print(el)
+    print("*-------*")
+
+    for el in range(10,20):
+        print(el)
+
+    print("*-------*")
+
+    #print even number
+    for el in range(10,30,2):
+     print(el)
 
 
-    #search number
-    num=[1,2,3,4,5,6]
-    ch=5
-    ind=0
-    for cch in num:
-        if(cch==ch):
-            print("number found at index",ind)
-            break
-        ind+=1
-        print("*--------*")
-
-    
-
-
+     get=int(input("Enter number"))
+     for el in range(10,20):
+        print(get*el)
