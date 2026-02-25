@@ -1,46 +1,45 @@
-#function in python
+#recursion in python
+def sho (n):
+    if (n==0):
+     return
+    print(n)
+    print(n-1)
+    print(n-2)
+    print(n-3)
+    print(n-4)
+sho(5)    
+print("*---------*")
 
-def cal ():
-    print("hellow world")
+#find factorial
 
-cal()
-print("*----------*")
-
-#write a program to print length of the list
-
-cou=["Apple","Banana","Orange"]
-def cout():
-    print(len(cou))
-cout()
-
-print("*----------*")
-cou=["Apple","Banana","Orange"]
-def cout(list):
-  for item in list:
-     print(item,end=" ")
-cout(cou)
-print("*----------*") 
+def fac(n):
+   if(n==0 or n==1):
+    return 1
+   return fac(n-1)*n
+print(fac(5))
+print("*---------*")
 
 
+#print Hellow Python 
+def pri(n):
+  if(n==0):
+    return
+  print(n)
+  print(n)
+  print(n)
+  print(n)
+  print(n)
+pri("Hellow python") 
+print("*---------*")
 
+def print_numbers(n):
+    if n == 0:          # base condition
+        return
+    print(n)
+    print_numbers(n - 1)   # recursion call
 
-#find factorial of n
-def cal(n):
-    fact=1
-    for i in range(1,n+1):
-        fact *=i
-    print(fact)
-cal(10)
+num = int(input("Enter number: "))
+print_numbers(num)
 
-print("*----------*") 
-   
-
-inp=int(input("Check even and node"))
-def che ():
-    if inp%2==0:
-     print("Even")
-    else:
-      "ood"
-che()
 
    
