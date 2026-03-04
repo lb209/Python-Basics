@@ -1,18 +1,33 @@
-#Read file
-f = open("C:/Users/M Hussain Shahzad/Desktop/software engineer/Python/ton.txt", "r")
-data = f.read()
-print(data)
-f.close()
-print("*------------*")
+#Topic number 1
 
-#Append file
-f = open("C:/Users/M Hussain Shahzad/Desktop/software engineer/Python/ton.txt", "a")
-f.write("\n i am a hussain")
-print("check the file ton.txt")
-f.close()
-print("*------------*")
+class Name: # it is claas
+    def __init__(self, name, age): #it is instructor
+        self.nam = name #it is variable of class
+        self.age = age
 
-#Replace  data
-f = open("C:/Users/M Hussain Shahzad/Desktop/software engineer/Python/ton.txt", "r")
-new_data=data.replace("This","It")
-print(new_data)
+s1 = Name("Ali", 33) #it is object
+print(s1.nam)#it is object
+print(s1.age)#it is object
+print("*--------*")
+
+#Topic number 2
+class Check: # it is claas
+    def __init__(self):#it is instructor
+        self.name="hassan"#it is variable of class
+        self.pas=12#it is variable of class
+    def login(self): #creat a function
+        uname=input("Enter name")
+        upas=int(input("Enter password")) 
+        if uname ==self.name and upas==self.pas:
+            print("Successfuly Login")
+        else:
+            print("Invald name and pass...")  
+            
+s2 = Check() #it is object
+s2.login()#it is object
+print("*--------*")
+
+
+    
+
+
