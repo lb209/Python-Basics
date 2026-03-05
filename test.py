@@ -1,30 +1,20 @@
-class Bank:
-    def __init__(self):
-        self.__balance = 0   # private balance
+class Passw:
+    def __init__(self, password):
+        self.__password = password   # 🔒 private
 
-    def add(self):
-        ino = int(input("Enter amount to deposit: "))
-        if ino > 0:
-            self.__balance += ino
-            print("Amount added successfully")
+    def set_password(self):
+        if self.__password:
+            print("Password set successfully")
         else:
-            print("Please enter valid amount")
+            print("Password not set")
 
-    def wit(self):
-        inon = int(input("Enter amount to withdraw: "))
-        if inon <= self.__balance:
-            self.__balance -= inon
-            print("Amount withdrawn successfully")
+    def check_password(self, user_input):
+        if self.__password == user_input:
+            print("Access granted")
         else:
-            print("Insufficient balance")
-
-    def show_balance(self):
-        print("Current Balance:", self.__balance)
+            print("Access denied")
 
 
-# Object
-s1 = Bank()
-
-s1.add()
-s1.wit()
-s1.show_balance()
+s1 = Passw("1234")
+s1.set_password()
+s1.check_password("1234")
