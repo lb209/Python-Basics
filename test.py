@@ -1,71 +1,16 @@
-#Single-Inheritance
-class Parent:
-    def pare(self):
-
-        print("i am parent")
-
-class Child(Parent):
-
-    def chil(self):
-
-        print("i am child")   
-
-p=Child()
-p.pare()
-p.chil()
-print("*--------*")
-#2
-
-
-class Person:
-    def set_name(self, name):
-        self.name = name
-
-    def show_name(self):
-        print(self.name)
-
-class Student(Person):
-    def study(self):
-        print("Student is studying")
-
-
-s = Student()
-
-s.set_name("Ali")
-s.show_name()
-s.study()
-print("*--------*")
- 
-#Mult Level-Inhertance    
 class A:
-    def grand(self):
-        print("Hellow i am grand father of ali")
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+
+       
 class B(A):
-    def father(self):
-        print("Hellow i am father of ali")        
-class C(B):
-    def son(self):
-        print("Hellow i am son")        
+    def gre(self):
+        super(). __init__(self.name,self.age)
+        print(self.name)
+        print(self.age)
 
-s=C()
-s.grand()
-s.father()
-s.son()
-print("*--------*")
-
-#Multiple-Inheritance
-class A:
-    def grand(self):
-        print("Hellow i am grand father of ali")
-class B:
-    def father(self):
-        print("Hellow i am father of ali")        
-class C(A,B):
-    def son(self):
-        print("Hellow i am son")        
-
-s=C()
-s.grand()
-s.father()
-s.son()
-print("*--------*")
+        print("get")
+        
+s=B("HY",22)
+s.gre()
