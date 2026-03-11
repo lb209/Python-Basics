@@ -1,20 +1,71 @@
-class Passw:
-    def __init__(self, password):
-        self.__password = password   # 🔒 private
+#Single-Inheritance
+class Parent:
+    def pare(self):
 
-    def set_password(self):
-        if self.__password:
-            print("Password set successfully")
-        else:
-            print("Password not set")
+        print("i am parent")
 
-    def check_password(self, user_input):
-        if self.__password == user_input:
-            print("Access granted")
-        else:
-            print("Access denied")
+class Child(Parent):
+
+    def chil(self):
+
+        print("i am child")   
+
+p=Child()
+p.pare()
+p.chil()
+print("*--------*")
+#2
 
 
-s1 = Passw("1234")
-s1.set_password()
-s1.check_password("1234")
+class Person:
+    def set_name(self, name):
+        self.name = name
+
+    def show_name(self):
+        print(self.name)
+
+class Student(Person):
+    def study(self):
+        print("Student is studying")
+
+
+s = Student()
+
+s.set_name("Ali")
+s.show_name()
+s.study()
+print("*--------*")
+ 
+#Mult Level-Inhertance    
+class A:
+    def grand(self):
+        print("Hellow i am grand father of ali")
+class B(A):
+    def father(self):
+        print("Hellow i am father of ali")        
+class C(B):
+    def son(self):
+        print("Hellow i am son")        
+
+s=C()
+s.grand()
+s.father()
+s.son()
+print("*--------*")
+
+#Multiple-Inheritance
+class A:
+    def grand(self):
+        print("Hellow i am grand father of ali")
+class B:
+    def father(self):
+        print("Hellow i am father of ali")        
+class C(A,B):
+    def son(self):
+        print("Hellow i am son")        
+
+s=C()
+s.grand()
+s.father()
+s.son()
+print("*--------*")
