@@ -1,61 +1,61 @@
-# #problem 1
-# class Animal:
-#     def sound(self):
-#         print("Animal makes sound")
-# class Dog:
-#     def sound(self):
-#         print("Dog barks")       
-# marg=[Animal(),Dog()]                 
-# for a in marg:
-#     a.sound()
+from abc import ABC, abstractmethod
 
+# =========================
+# Abstract Class (Abstraction)
+# =========================
+class Employee(ABC):
+    def __init__(self, name):
+        # Encapsulation: private variable
+        self.__name = name
 
-#problem 2
+    # method to access private name
+    def display_name(self):
+        return self.__name
 
-# class A:
-#     def send(self):
-#         print("Vechical moves")
-# class B(A):
-#     def send(self):
-#         super().send()
-#         print("car is moving")            
+    # abstract method for salary
+    @abstractmethod
+    def calculate_salary(self):
+        pass
 
-# s=B()
-# s.send()       
+    # abstract method for work (Polymorphism)
+    @abstractmethod
+    def work(self):
+        pass
 
-# problem 3
-# class Shape:
-#     def area(self):
-#         print("Shape area")
+# =========================
+# Child Class 1
+# =========================
+class Developer(Employee):
+    def calculate_salary(self):
+        return 50000
 
-# class Circle(Shape):          # inheritance
-#     def area(self):           # method overriding
-#         print("Circle area")
+    def work(self):
+        return "Writes code"
 
-# class Rectangle(Shape):       # inheritance
-#     def area(self):           # method overriding
-#         print("Rectangle area")
+# =========================
+# Child Class 2
+# =========================
+class Manager(Employee):
+    def calculate_salary(self):
+        return 100000
 
-# c = Circle()                  # object calling
-# r = Rectangle()               # object calling
+    def work(self):
+        return "Manages team"
 
-# c.area()
-# r.area()
+# =========================
+# Object Creation + Direct Output
+# =========================
+dev = Developer("Ali")
+mgr = Manager("Mr. Khan")
 
-#problem 5
+# Developer Output
+print("=== Developer Info ===")
+print("Name:", dev.display_name())
+print("Salary:", dev.calculate_salary())
+print("Work:", dev.work())
 
-class BANK:
-    def int(self):
-        print("Bank")
-
-class HBL:
-    def int(self):
-        print("HBL interest rate")
-class UBL:
-    def int(self):
-        print("UBL Interest")     
-h=HBL()
-u=UBL()      
-h.int()
-u.int()
-
+# Manager Output
+print("\n=== Manager Info ===")
+print("Name:", mgr.display_name())
+print("Salary:", mgr.calculate_salary())
+print("Work:", mgr.work())
